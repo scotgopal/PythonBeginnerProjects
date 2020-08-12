@@ -1,4 +1,4 @@
-# PythonBeginnerProjects
+# Python Beginner Projects
 Project Based Learning: 6 Basic Python Beginner Projects Tutorials and Example Code with Windows Executables
 
 _Project Ideas Inspired By: Ilyaas Lunat through his post [here.](https://www.codementor.io/@ilyaas97/6-python-projects-for-beginners-yn3va03fs#rock-paper-scissors-game)_
