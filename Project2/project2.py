@@ -4,7 +4,7 @@ import sys
 import os
 
 while(1):
-    def playagain():
+    def playagain(): #function to request if users want to replay
         while(1):
             replay = ((input("Do you want to play again? (y/n): ")).lower()).strip()
             
@@ -15,20 +15,20 @@ while(1):
         
         if replay =="n":
             print("\nProgramme exiting in 3s...")
-            time.sleep(3)
-            sys.exit()
+            time.sleep(3)   #for 3 second time delay
+            sys.exit()  #exits the programme
             
             
-    os.system('cls')
+    os.system('cls') #clears the terminal
     print("------------------------------------")
     print("--------Schere|Stein|Papier---------")
     print("------------------------------------\n")
     print("Play rock, paper, scissor with the programme!\n")
 
-    whatToThrow = ["rock", "paper", "scissor"]
-    computerChoice = random.choice(whatToThrow)
+    whatToThrow = ["rock", "paper", "scissor"] #a list of choices
+    computerChoice = random.choice(whatToThrow) #randomizing selection from the list
 
-    while(1):
+    while(1): #a while loop to ensure valid input from user
         print("Between [rock, paper, scissor]")
         userChoice = ((input("What is your choice? ")).lower()).strip()
         
