@@ -1,8 +1,6 @@
 import random
 import string
-import symbol
 import os
-import sys
 
 newPass = True
 while(newPass):
