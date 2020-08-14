@@ -20,6 +20,17 @@ _Project Ideas Inspired By: Ilyaas Lunat through his post [here.](https://www.co
 2. Familiarise with raising exceptions as this involves with user input
 3. Used basic conditional statements: if, elif, else; while;
 
+### Project 3
+1. Libraries used include matplotlib.pyplot and numpy
+2. Learn the difference between np.arange and np.linspace
+3. Basic plot information such as title, legend etc
+
+### Project 4
+1. Used random, os and string library
+2. New way to exit program using global variable
+3. Understand more on using string library to get info on alphabets and digits. Avoid creating dictionaries that are already available.
+4. Learn to extract info from list types and convert to string
+
 **P/S** : I am also a beginner myself, so if you think there is something that can be improved, please bring up a new Issue. I am happy to be learning on ways to improve on my coding. Please also feel free to comment on my work. Thank you.
 
 _Scotrraaj Gopal_\
