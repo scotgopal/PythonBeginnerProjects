@@ -2,8 +2,11 @@ import string
 import random
 import os
 import time
+import sys
 
-file = open('Project5/sowpods.txt')
+# file = open(os.path.join(sys.path[0],"sowpods.txt"))
+# file = open("Project5\sowpods.txt")
+file = open("sowpods.txt")
 wordsWithNewLine = file.readlines()
 file.close()
 
@@ -44,7 +47,7 @@ def guessProcess():
             if trial not in string.ascii_letters:
                 print("\nThis version of Hangman no numbers and single alphabets only, smartie!")
                 raise ValueError
-            if trial in rightLetters:
+            elif trial in rightLetters:
                 print("That is already correct, genius. Try something else.\n")
                 guessProcess()
             elif trial in wrongLetters:
@@ -86,7 +89,8 @@ def letterCheck(trial):
         wrongLetters.append(trial)
         global mistakeCount
         mistakeCount+=1
-        print("Ooopsie... Wrong guess. You have", 6-mistakeCount,"tries left!")
+        print("Ooopsie... Wrong guess. You have", 6-mistakeCount,"tries(/try) left!\n")
+        print(len(selectedWord),"-letter word: " + guessed)
         guessProcess()
 
 
