@@ -31,6 +31,18 @@ _Project Ideas Inspired By: Ilyaas Lunat through his post [here.](https://www.co
 3. Understand more on using string library to get info on alphabets and digits. Avoid creating dictionaries that are already available.
 4. Learn to extract info from list types and convert to string
 
+### Project 5
+1. Used string, random, os, time and sys libraries
+2. Learn to open and read .txt files
+3. Learn to utilise and manipulate list datatypes; reading each element in a list.
+4. You may check your coding time to time (without entering debug mode) by using print() at the right places. Surely helps in understanding the problem that you will face, and saves time too!
+5. Workflow:-\
+    a. Read and store words from .txt file\
+    b. Create programme header\
+    c. Select word that has to be guessed and display to player.
+    d. Check user inputs for each guess. Update if they have guessed correctly. I made my program to record what are the letters that the user had already used.
+    e. Let them know if they manage to guess all letters without making 6 mistakes. Else exit programe. I gave my player the ability to decide if they want to play again. ;)
+
 **P/S** : I am also a beginner myself, so if you think there is something that can be improved, please bring up a new Issue. I am happy to be learning on ways to improve on my coding. Please also feel free to comment on my work. Thank you.
 
 _Scotrraaj Gopal_\
