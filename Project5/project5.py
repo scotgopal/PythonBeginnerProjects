@@ -2,7 +2,6 @@ import string
 import random
 import os
 import time
-# import pandas as pd
 
 file = open('Project5/sowpods.txt')
 wordsWithNewLine = file.readlines()
@@ -43,8 +42,16 @@ def guessProcess():
         if mistakeCount <6:
             trial = (input("What is your guess:")).lower()
             if trial not in string.ascii_letters:
-                print("\nThis version of Hangman no numbers, smartie!")
+                print("\nThis version of Hangman no numbers and single alphabets only, smartie!")
                 raise ValueError
+            if trial in rightLetters:
+                print("That is already correct, genius. Try something else.\n")
+                guessProcess()
+            elif trial in wrongLetters:
+                print("There's 26 alphabets, and you got wrong for that already!\n")
+                guessProcess()
+            else:
+                pass
             letterCheck(trial)
         else:
             print('You LOST!\n')
