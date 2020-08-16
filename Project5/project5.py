@@ -29,8 +29,8 @@ def playAgain():
         if choice==1:
             pass
         else:
-            print("Programme exiting...\n")
-            time.sleep(2)
+            print("Programme exiting in 3s...\n")
+            time.sleep(3)
             global replay 
             replay = False
     except ValueError:
@@ -61,7 +61,6 @@ def guessProcess():
             print('The correct word was:\n>>>>',selectedWord,'<<<<\n')
             playAgain()
     except ValueError:
-        print ('Invalid input! Input an alphabet.\n')
         guessProcess()
 
 def letterCheck(trial):
