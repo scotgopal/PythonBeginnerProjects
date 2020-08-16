@@ -41,7 +41,8 @@ _Project Ideas Inspired By: Ilyaas Lunat through his post [here.](https://www.co
     b. Create programme header\
     c. Select word that has to be guessed and display to player.
     d. Check user inputs for each guess. Update if they have guessed correctly. I made my program to record what are the letters that the user had already used.
-    e. Let them know if they manage to guess all letters without making 6 mistakes. Else exit programe. I gave my player the ability to decide if they want to play again. ;)
+    e. Let them know if they manage to guess all letters without making 6 mistakes. Else exit programe. I gave my player the ability to decide if they want to play again. ;)\
+6. __p/s: Make sure when you run the .exe, it has the '_sowpod.txt_' in the same directory.__
 
 **P/S** : I am also a beginner myself, so if you think there is something that can be improved, please bring up a new Issue. I am happy to be learning on ways to improve on my coding. Please also feel free to comment on my work. Thank you.
 
