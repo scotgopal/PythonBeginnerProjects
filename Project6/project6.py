@@ -1,6 +1,7 @@
 import random
 import os
 import time
+import statistics as stat
 
 replay = True
 
@@ -34,7 +35,7 @@ def createList():
 
 def checkNumber(userGuess):
     
-    if userGuess == median(fullNumberList):
+    print(stat.median(fullNumberList))
 
 
 while(replay):
@@ -53,6 +54,7 @@ while(replay):
     fullNumberList.append(random.randint(0,100))
     # print("First Element:", fullNumberList[0])
     currentElements = len(fullNumberList)
+
 
     createList()
 
@@ -73,15 +75,3 @@ while(replay):
 
     # playAgain()
     break
-
-listA = []
-for i in range(25) :
-    listA.append(i)
-
-def halving():
-    length = len(listA)
-    length/=length
-    if length is float:
-        length = round(length)
-        
-
