@@ -1,20 +1,20 @@
 import random
 import os
 import time
-import statistics as stat
+import sys
+import numpy as np
 
-replay = True
+# random.seed(1)
 
 def playAgain():
     try:
         choice = int(input("Press 1 - Play again?\n\tOR\nNot 1 - Exit programme\t:"))
         if choice==1:
-            pass
+            gameStart()
         else:
             print("Programme exiting in 3s...\n")
             time.sleep(3)
-            global replay 
-            replay = False
+            sys.exit()
     except ValueError:
         print("Invalid choice, try again...\n")
         playAgain()
@@ -33,12 +33,46 @@ def createList():
         else:
             pass
 
-def checkNumber(userGuess):
+def checkNumber(bigList, userGuess , halfCount):
+
+    halfCount = halfCount+1
+    print("\nHalving Process:", halfCount)
+    bigList = sorted(bigList)
+    halfA= []
+    halfB = []
+
+    medianValue = np.median(bigList)
+    # print('medianValue:', medianValue)
+    # print("Big List", bigList)
+
+
+    if medianValue in bigList: #total elements in List is ODD!
+        # print("Present in List")
+        medianIndex = bigList.index(medianValue)
+        if userGuess == bigList[medianIndex]:
+            print ("Found your number in the middle position during the", halfCount-1,"th halving process!\n")
+            playAgain()
+            pass
+        halfA = bigList[:medianIndex]
+        halfB = bigList[medianIndex+1:]
+        # print("Median Index", len(bigList[medianIndex+1:]))
+    else: #total elements in List is EVEN!
+        # print("Not in List")
+        medianPlusOne = bigList.index(medianValue+1) 
+        halfA = bigList[:medianPlusOne] # does not include medianPlusOne meaning it registers exactly the first (n/2) elements
+        # print("Length A:", len(halfA))
+        halfB = bigList[medianPlusOne:] # includes medianPlusOne until the end meaning it registers exactly the second (n/2) elements
+        # print("Length B:", len(halfB))
+        # print(bigList)
     
-    print(stat.median(fullNumberList))
+    if userGuess in halfA:
+        print("First half selected")
+        checkNumber (halfA, userGuess , halfCount)
+    else:
+        print("Second half selected")
+        checkNumber (halfB, userGuess , halfCount)
 
-
-while(replay):
+def gameStart():
 
     # Create a random list of numbers with difference of 2 (How many numbers?)
     os.system('cls')
@@ -47,14 +81,15 @@ while(replay):
     print("------------------------------\n")
     print("Try to guess the number in the computer's random list of numbers!\n")
     
+    global totalElements
     totalElements = random.randint(10, 50)
     # print("Total Elements:",totalElements)
     
-    fullNumberList = []
+    global fullNumberList 
     fullNumberList.append(random.randint(0,100))
     # print("First Element:", fullNumberList[0])
+    global currentElements 
     currentElements = len(fullNumberList)
-
 
     createList()
 
@@ -71,7 +106,16 @@ while(replay):
         except ValueError:
             print("Input only an integer! Try again.\n")
 
-    checkNumber(userGuess)
+    if userGuess in sortedList:
+        print("Your number is in the list! Now we will see how many halves it takes to find your number.\n")
+        halfCount = 0
+        checkNumber(sortedList, userGuess, halfCount)
+    else:
+        print("Bad guess!\n")
+        playAgain()
 
-    # playAgain()
-    break
+totalElements = 0
+currentElements = 0
+fullNumberList = []
+
+gameStart()
