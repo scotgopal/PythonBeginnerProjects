@@ -42,9 +42,6 @@ def checkNumber(bigList, userGuess , halfCount):
     halfB = []
 
     medianValue = np.median(bigList)
-    # print('medianValue:', medianValue)
-    # print("Big List", bigList)
-
 
     if medianValue in bigList: #total elements in List is ODD!
         # print("Present in List")
@@ -55,15 +52,10 @@ def checkNumber(bigList, userGuess , halfCount):
             pass
         halfA = bigList[:medianIndex]
         halfB = bigList[medianIndex+1:]
-        # print("Median Index", len(bigList[medianIndex+1:]))
     else: #total elements in List is EVEN!
-        # print("Not in List")
         medianPlusOne = bigList.index(medianValue+1) 
         halfA = bigList[:medianPlusOne] # does not include medianPlusOne meaning it registers exactly the first (n/2) elements
-        # print("Length A:", len(halfA))
         halfB = bigList[medianPlusOne:] # includes medianPlusOne until the end meaning it registers exactly the second (n/2) elements
-        # print("Length B:", len(halfB))
-        # print(bigList)
     
     if userGuess in halfA:
         print("First half selected")
@@ -87,14 +79,12 @@ def gameStart():
     
     global fullNumberList 
     fullNumberList.append(random.randint(0,100))
-    # print("First Element:", fullNumberList[0])
     global currentElements 
     currentElements = len(fullNumberList)
 
     createList()
 
     sortedList = sorted(fullNumberList)
-    # print("Sorted List:",sortedList)
 
     print("Computer has prepared a list with", len(fullNumberList), "elements!\n")
     
