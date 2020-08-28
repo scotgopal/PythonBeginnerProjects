@@ -44,7 +44,12 @@ _Project Ideas Inspired By: Ilyaas Lunat through his post [here.](https://www.co
     e. Let them know if they manage to guess all letters without making 6 mistakes. Else exit programe. I gave my player the ability to decide if they want to play again. ;)\
 6. __p/s: Make sure when you run the .exe, it has the '_sowpod.txt_' in the same directory.__
 
-**P/S** : I am also a beginner myself, so if you think there is something that can be improved, please bring up a new Issue. I am happy to be learning on ways to improve on my coding. Please also feel free to comment on my work. Thank you.
+### Project 6
+1. Used random, os, sys, time and numpy library
+2. Utilise functions to allow code jumping (as a replacement for 'goto' in C programming)
+3. Add print() functions to understand the code functionality while you're coding the project. I used them A LOT particularly for this project.
+
+**P/S** : I am also a beginner myself, so if you think there is something that can be improved, please bring up a new Issue in GitHub. I am happy to be learning on ways to improve on my coding. Please also feel free to comment on my work or if you have learnt something new through the examples. Thank you and good luck learning Python!!
 
 _Scotrraaj Gopal_\
 _scotgopal@gmail.com_
